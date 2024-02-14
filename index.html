@@ -1,0 +1,51 @@
+<html>
+<head>
+			<title> Pizza App by viraj </title>
+			<style>
+					* { font-size:50px; font-family: Arial;}
+					body { background-color:lightyellow; }
+					h1 {background-color:black; color:white; width:60%; border-radius:40px;}
+					input[type=radio] {width: 1.5%;  height: 0.5em; }
+			</style>
+			<script>
+					function show()
+					{			
+					event.preventDefault();
+					let name = document.getElementById("id_name");
+					let msg = document.getElementById("id_msg");
+					let cheese = document.getElementById("id_cheese");
+					let tomato = document.getElementById("id_tomato");
+					let onion = document.getElementById("id_onion");
+					let corn = document.getElementById("id_corn");
+					
+					let toppings = "";
+					if (cheese.checked)				toppings= toppings " Cheese ";
+					if (tomato.checked)				toppings= toppings " Tomato ";
+					if (onion.checked)				toppings= toppings " Onion ";
+					if (corn.checked)					toppings= toppings " Corn ";
+					
+					let ans = " name =" + name.value + "toppings" + toppings;
+					msg.innerHTML = ans;
+					}
+			</script>
+</head>
+<body>
+<center>
+			<h1> Pizza App </h1>
+			<form onsubmit="show( )">
+			<input type="text" placeholder="enter your name" id="id_name"/>
+			<br><br>
+			<input type="checkbox" name="f" id="id_cheese" /> Cheese
+			<input type="checkbox" name="f" id="id_tomato" /> Tomato
+			<input type="checkbox" name="f" id="id_onion" /> Onion
+			<input type="checkbox" name="f" id="id_corn" /> Corn
+			<br><br>
+			<input type="submit"  value="order"/>
+			</form>
+			<h2 id ="id_msg"/>
+</center>
+</body>
+</html>
+
+			
+					
